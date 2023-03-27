@@ -7,7 +7,7 @@ ground.src = "img/ground.png";
 const foodImg = new Image();
 foodImg.src = "img/food.png";
 
-let box = 32;
+let box = 22;
 
 let score = 0;
 
@@ -55,6 +55,10 @@ function eatTail(head, arr) {
             setTimeout(function(){
                 location.reload();
             }, 500);
+            for(let i = 0; i < snake.length; i++) {
+                ctx.fillStyle = "red";
+                ctx.fillRect(snake[0].x, snake[0].y, box, box);
+            }
         }
     }
 }
